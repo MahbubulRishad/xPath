@@ -31,7 +31,12 @@ public class LocatingWithXpath {
 
 
 
+//        Xpath - with indexing
+        driver.findElement(By.xpath("(//input[@name = 'radioButton'])[3]")).click();
 
+//        Xpath - with visible text()
+//        alternate xpath - //a[contains(text(), 'Open Tab')]
+        driver.findElement(By.xpath("//a[text() = 'Open Tab']")).click();
 
         Thread.sleep(2000);
         driver.quit();
