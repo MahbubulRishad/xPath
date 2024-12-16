@@ -14,11 +14,23 @@ public class LocatingWithXpath {
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
         driver.manage().window().maximize();
 
-        driver.findElement(By.xpath("//input[@value = 'radio1']")).click();
-
-//        Absolute Xpath
+//        Absolute Xpath (not recommended)
         String pageTitle = driver.findElement(By.xpath("/html/body/h1")).getText();
         System.out.println(pageTitle);
+
+
+//         Relative Xpath
+        driver.findElement(By.xpath("//input[@value = 'radio1']")).click();
+
+//        xpath chaining
+        String getTextSample = driver.findElement(By.xpath("//div[@class = 'block large-row-spacer']//legend[text() = 'Suggession Class Example']")).getText();
+        System.out.println(getTextSample);
+
+//        Xpath - Contains(@tagname, 'value')
+        driver.findElement(By.xpath("//input[contains(@class, 'ui-autocomplete-input')]")).sendKeys("Bangladesh");
+
+
+
 
 
         Thread.sleep(2000);
