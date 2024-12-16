@@ -36,7 +36,15 @@ public class LocatingWithXpath {
 
 //        Xpath - with visible text()
 //        alternate xpath - //a[contains(text(), 'Open Tab')]
-        driver.findElement(By.xpath("//a[text() = 'Open Tab']")).click();
+
+//        driver.findElement(By.xpath("//a[text() = 'Open Tab']")).click();
+
+
+//        Xpath - normalize-space()
+        String optionText = driver.findElement(By.xpath("//label[normalize-space() = 'Option2']")).getText();
+        System.out.println(optionText);
+        driver.findElement(By.xpath("//input[contains(@value, 'option2')]")).click();
+
 
         Thread.sleep(2000);
         driver.quit();
