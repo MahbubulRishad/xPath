@@ -69,6 +69,11 @@ public class LocatingWithXpath {
         String getParentText = driver.findElement(By.xpath("//input[@value = 'radio1']/parent::label/preceding-sibling::legend")).getText();
         System.out.println(getParentText);
 
+
+//        Xpath - xpath using ancestor
+        String getSuggestionClassExampleText = driver.findElement(By.xpath("(//input[@value = 'radio1']/ancestor::div/div/fieldset/legend)[2]")).getText();
+        System.out.println(getSuggestionClassExampleText);
+
         Thread.sleep(2000);
         driver.quit();
     }
