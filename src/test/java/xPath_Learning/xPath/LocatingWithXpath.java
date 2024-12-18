@@ -48,6 +48,10 @@ public class LocatingWithXpath {
 //        Xpath - xpath using "and" operator
         driver.findElement(By.xpath("//label//input[@type = 'checkbox' and @value = 'option3']")).click();
 
+
+ //        Xpath - xpath using "or" operator
+        driver.findElement(By.xpath("//input[@id = 'checkBoxOption1' or @value = 'option3kljkj']")).click();
+
         Thread.sleep(2000);
         driver.quit();
     }
