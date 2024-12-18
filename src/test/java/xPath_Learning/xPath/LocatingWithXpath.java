@@ -52,6 +52,12 @@ public class LocatingWithXpath {
  //        Xpath - xpath using "or" operator
         driver.findElement(By.xpath("//input[@id = 'checkBoxOption1' or @value = 'option3kljkj']")).click();
 
+
+//        Xpath - xpath using starts-with()
+        String startWithText = driver.findElement(By.xpath("//legend[starts-with(text(), 'Radio Button')]")).getText();
+        System.out.println(startWithText);
+
+
         Thread.sleep(2000);
         driver.quit();
     }
