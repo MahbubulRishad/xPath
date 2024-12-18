@@ -65,6 +65,10 @@ public class LocatingWithXpath {
         driver.findElement(By.xpath("//legend[text() = 'Switch To Alert Example']/following-sibling::input[@id = 'alertbtn']/preceding-sibling::input")).sendKeys("Abc");
 
 
+//        Xpath - xpath using 'parent' technique
+        String getParentText = driver.findElement(By.xpath("//input[@value = 'radio1']/parent::label/preceding-sibling::legend")).getText();
+        System.out.println(getParentText);
+
         Thread.sleep(2000);
         driver.quit();
     }
