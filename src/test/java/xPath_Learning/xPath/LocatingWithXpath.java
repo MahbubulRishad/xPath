@@ -61,6 +61,10 @@ public class LocatingWithXpath {
         driver.findElement(By.xpath("//legend[text() = 'Switch To Alert Example']/following-sibling::input[@id = 'alertbtn']")).click();
 
 
+//        Xpath - xpath using 'preceding-sibling' technique (locate the previous sibling) not widely used
+        driver.findElement(By.xpath("//legend[text() = 'Switch To Alert Example']/following-sibling::input[@id = 'alertbtn']/preceding-sibling::input")).sendKeys("Abc");
+
+
         Thread.sleep(2000);
         driver.quit();
     }
