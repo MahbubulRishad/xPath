@@ -45,6 +45,8 @@ public class LocatingWithXpath {
         System.out.println(optionText);
         driver.findElement(By.xpath("//input[contains(@value, 'option2')]")).click();
 
+//        Xpath - xpath using "and" operator
+        driver.findElement(By.xpath("//label//input[@type = 'checkbox' and @value = 'option3']")).click();
 
         Thread.sleep(2000);
         driver.quit();
