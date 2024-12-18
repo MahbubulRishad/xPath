@@ -57,6 +57,9 @@ public class LocatingWithXpath {
         String startWithText = driver.findElement(By.xpath("//legend[starts-with(text(), 'Radio Button')]")).getText();
         System.out.println(startWithText);
 
+//        Xpath - xpath using 'following-sibling' technique
+        driver.findElement(By.xpath("//legend[text() = 'Switch To Alert Example']/following-sibling::input[@id = 'alertbtn']")).click();
+
 
         Thread.sleep(2000);
         driver.quit();
