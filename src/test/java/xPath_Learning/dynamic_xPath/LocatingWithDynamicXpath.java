@@ -50,6 +50,6 @@ public class LocatingWithDynamicXpath {
         }
 
 
-//        driver.quit();
+        driver.quit();
     }
 }
